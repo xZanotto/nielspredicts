@@ -7,6 +7,81 @@
 </head>
 
 <body>
-    <p>hello world</p>
+ <div id="header">
+    <img src="nielspredicts_header.png" alt="header image for nielspredicts" width="100%">
+    <h2>I share my predictions, with and without explanations.
+        Preferably without</h2>
+</div>
+
+<div id="about me">
+    <img src="ich.png" alt="Portrait of Niels Zanotto with orange photofilter" width="175.5" height="175.5>"
+    <h4>I am Niels<br>Start-up entrepreneur, tech mogul, angel investor, hobby chef on michelin level.</h4>
+    <form id="textInputForm">
+        <label for="inputText">Insert your prediction</label>
+        <input type="text" id="inputText" name="inputText" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="textDisplay"></div>
+    <script>
+        document.getElementById('textInputForm').onsubmit = function(event) {
+            event.preventDefault();
+            var inputText = document.getElementById('inputText').value;
+            var displayArea = document.getElementById('textDisplay');
+            var newEntry = document.createElement('div');
+            newEntry.textContent = inputText;
+            displayArea.insertBefore(newEntry, displayArea.firstChild);
+            document.getElementById('inputText').value = ''; // Textfeld leeren
+        };
+    </script>
+    <img src="logo.gif" alt="nielspredicts logo gif" width="739" height="30">
+</div>
+
+<div id="Blog Feed">
+    <img src="quickshots.gif" alt="quickshots category gif" width="230" height="230">
+
+    <div id="moonshots">
+        <img src="gorillas.png" alt="gorillas bag with purple photofilter" width="385" height="326">
+        <div id="blogpost copy">
+            <p>05.05.2024</p>
+            <h4><a href="https://drive.google.com/file/d/1p8Vn3q-N7pEp4-2wHkK7eG4PhAzCZ-No/view?usp=sharing">Moonshots</a></h4>
+        </div>
+    </div>
+
+    <div id="tiktok ban">
+        <img src="shoshow.png" alt="Tiktok CEO with blue filter" width="209" height="268">
+        <div id="blogpost copy">
+            <p>19.04.2024</p>
+            <h4>Tiktok gets banned in the US</h4>
+        </div>
+
+     <div id="tesla valueation">
+            <img src="cybertruck.png" alt="cybertruck with green filter" width="318" height="237">
+            <div id="blogpost copy">
+                <p>15.04.2024</p>
+                <h4>Tesla will trade at less than $150B market cap.</h4>
+            </div>
+
+    <div id="thruth social">
+            <img src="trump.png" alt="donald trump with green filter" width="332" height="186">
+            <div id="blogpost copy">
+                <p>14.04.2024</p>
+                <h4>Trump's Truth Social share price will fall below $10</h4>
+            </div> 
+</div>
+
+<div id="Nulsletter advertisment">
+    <h1>Nulsletter</h1>
+    <form action="mailto:office@nielspredicts.com" method="post" enctype="text/plain">
+        E-Mail<br>
+        <input type="text" name="E-Mail">
+        <button type="submit" name="Submit"></button>
+    </form>
+    <h2>Want to knock your next bumble date off her feet? Drop some hot takes before your next pointless meeting starts?<br>
+        Or simply explain the uber driver how the world will change?<br>
+        Then you've come to the right place.<br>
+        Subscribe to the nulsletter™️ now so you never miss a prediction again.<br>
+        <a href="https://open.spotify.com/track/2NBQmPrOEEjA8VbeWOQGxO?si=Inq29GsYScWDeZL5gfRXwQ">don't think about it, drop it like it's hot!</a></h2>
+</div>
+
 </body>
 </html>
